@@ -20,6 +20,7 @@ The dataset used in this project is publicly available and was sourced from Kagg
 The full analysis for this project was carried out in a single notebook, including data preparation, exploratory analysis, regression modelling, and diagnostic checks. 
 
 The notebook is included in this repository: 
+
 [Analysis Notebook](https://github.com/BlossomInsights/Reading_Mood_Analysis/blob/main/reading_mood_project.ipynb)
 
 ## Tools Used
@@ -71,7 +72,6 @@ To formally assess whether the patterns observed in the exploratory analysis per
 
 Ordinary Least Squares (OLS) regression was selected due to its transparency and suitability for exploratory behavioural analysis. This approach allows the relative contribution of reading behaviour and demographic factors to mood outcomes to be examined in a straightforward and interpretable way. 
 
-...
 ```python
 y = df["Mood_Impact_Num"]
 X = df[["Weekly_Reading_Time(hours)", "Age", "Gender_Num"]]
@@ -86,19 +86,26 @@ The fitted model demonstrated strong overall performance, explaining a large pro
  
 **Figure 4: OLS regression results summary**
 
-The relationship between weekly reading time and mood score is visualised below, with thefitted regression line overlaid.
-![Figure3](Images/Figure3.png)
+Weekly reading time emerged as the strongest and only statistically significant predictor of mood impact. Holding age and gender constant, higher weekly reading time was associated with more positive mood scores. This finding reinforces the descriptive patterns observed in the exploratory analysis. Age showed a small negative association with mood, but this effect was not statistically significant, while gender did not exhibit a statistically significant relationship once reading behaviour was accounted for. 
+
+![Figure5](Images/Figure5.png)
+
 **Figure 5: Relationship between weekly reading time and mood score with fitted regressionline**
 
-Residual diagnostics did not indicate major violations of OLS assumptions.
-![Figure3](Images/Figure3.png)
+Overall, the regression results suggest that behavioural factors, such as reading engagement, play a more important role in explaining mood outcomes within this dataset than basic demographic characteristics. Results are interpreted as associations rather than causal effects, reflecting the self‑reported and cross‑sectional nature of the data. 
+
+![Figure6](Images/Figure6.png)
+
 **Figure 6: Residuals plotted against predicted mood scores**
 
-## Key Findings
-Higher weekly reading time is consistently associated with more positive self-reported mood outcomes across both exploratory and regression analyses. Reading behaviour emerges as a stronger explanatory factor than demographic variables such as age and gender within this dataset. Findings are interpreted as associations rather than causal effects due to the self-reported and cross-sectional nature of the data.
+##Key Findings
+Higher weekly reading time is consistently associated with more positive self‑reported mood outcomes across both exploratory and regression analyses. Reading behaviour emerges as a stronger explanatory factor than demographic variables such as age and gender within this dataset. Findings are interpreted as associations rather than causal effects due to the self‑reported and cross‑sectional nature of the data. 
 
-## Limitations and Ethical Considerations
-Several limitations apply to this analysis. Mood impact is self-reported and subjective, which may introduce response bias, and the dataset represents a single snapshot in time, limiting causal interpretation. Mood impact was encoded as an ordinal numeric variable to support regression modelling, which improves interpretability but simplifies a more nuanced outcome. OLS regression was therefore used as a pragmatic exploratory approach, with alternative methods such as ordered logistic regression left for future work. From an ethical perspective, the dataset was publicly available and fully anonymised, with nopersonal or sensitive information used. Results are interpreted cautiously, with an emphasis on responsible analysis and avoidance of causal claims.
+##Limitations and Ethical Considerations 
+Several limitations apply to this analysis. Mood impact is self‑reported and subjective, which may introduce response bias, and the dataset represents a single snapshot in time, limiting causal interpretation. Mood impact was encoded as an ordinal numeric variable to support regression modelling, which improves interpretability but simplifies a more nuanced outcome. OLS regression was therefore used as a pragmatic exploratory approach, with alternative methods such as ordered logistic regression left for future work. 
 
-## Conclusion
-This project demonstrates a structured and reproducible data science workflow, from data preparation and exploratory analysis through to regression modelling and interpretation. Theresults indicate a clear positive association between weekly reading time and self-reported mood outcomes, while demographic factors such as age and gender play a more limited role once reading behaviour is accounted for. Findings are interpreted cautiously as associations rather than causal effects and provide a clear foundation for further exploration using alternative modelling approaches or richer data.
+From an ethical perspective, the dataset was publicly available and fully anonymised, with no personal or sensitive information used. Results are interpreted cautiously, with an emphasis on responsible analysis and avoidance of causal claims. 
+
+##Conclusion 
+
+This project demonstrates a structured and reproducible data science workflow, from data preparation and exploratory analysis through to regression modelling and interpretation. The results indicate a clear positive association between weekly reading time and self‑reported mood outcomes, while demographic factors such as age and gender play a more limited role once reading behaviour is accounted for. Findings are interpreted cautiously as associations rather than causal effects and provide a clear foundation for further exploration using alternative modelling approaches or richer data. 
