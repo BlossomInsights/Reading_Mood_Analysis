@@ -98,14 +98,14 @@ Overall, the regression results suggest that behavioural factors, such as readin
 
 **Figure 6: Residuals plotted against predicted mood scores**
 
-##Key Findings
+## Key Findings
 Higher weekly reading time is consistently associated with more positive self‑reported mood outcomes across both exploratory and regression analyses. Reading behaviour emerges as a stronger explanatory factor than demographic variables such as age and gender within this dataset. Findings are interpreted as associations rather than causal effects due to the self‑reported and cross‑sectional nature of the data. 
 
-##Limitations and Ethical Considerations 
+## Limitations and Ethical Considerations 
 Several limitations apply to this analysis. Mood impact is self‑reported and subjective, which may introduce response bias, and the dataset represents a single snapshot in time, limiting causal interpretation. Mood impact was encoded as an ordinal numeric variable to support regression modelling, which improves interpretability but simplifies a more nuanced outcome. OLS regression was therefore used as a pragmatic exploratory approach, with alternative methods such as ordered logistic regression left for future work. 
 
 From an ethical perspective, the dataset was publicly available and fully anonymised, with no personal or sensitive information used. Results are interpreted cautiously, with an emphasis on responsible analysis and avoidance of causal claims. 
 
-##Conclusion 
+## Conclusion 
 
 This project demonstrates a structured and reproducible data science workflow, from data preparation and exploratory analysis through to regression modelling and interpretation. The results indicate a clear positive association between weekly reading time and self‑reported mood outcomes, while demographic factors such as age and gender play a more limited role once reading behaviour is accounted for. Findings are interpreted cautiously as associations rather than causal effects and provide a clear foundation for further exploration using alternative modelling approaches or richer data. 
