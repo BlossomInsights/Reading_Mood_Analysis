@@ -90,6 +90,8 @@ The OLS summary table provides the key statistics used to evaluate each predicto
 
 Weekly reading time emerged as the strongest and only statistically significant predictor of mood impact. Holding age and gender constant, higher weekly reading time was associated with more positive mood scores. This finding reinforces the descriptive patterns observed in the exploratory analysis. Age showed a small negative association with mood, but this effect was not statistically significant, while gender did not exhibit a statistically significant relationship once reading behaviour was accounted for. 
 
+This relationship is clearly visable in the data, with mood scores tending to rise as weekly reading time increases. 
+
 ![Figure5](Images/Figure5.png)
 
 **Figure 5: Relationship between weekly reading time and mood score with fitted regression line**
