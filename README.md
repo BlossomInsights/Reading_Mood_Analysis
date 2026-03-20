@@ -90,7 +90,7 @@ Weekly reading time emerged as the strongest and only statistically significant 
 
 ![Figure5](Images/Figure5.png)
 
-**Figure 5: Relationship between weekly reading time and mood score with fitted regressionline**
+**Figure 5: Relationship between weekly reading time and mood score with fitted regression line**
 
 Overall, the regression results suggest that behavioural factors, such as reading engagement, play a more important role in explaining mood outcomes within this dataset than basic demographic characteristics. Results are interpreted as associations rather than causal effects, reflecting the self‑reported and cross‑sectional nature of the data. 
 
