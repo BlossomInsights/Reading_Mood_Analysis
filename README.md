@@ -12,14 +12,15 @@ Key variables include weekly reading time, mood impact (categorised as negative,
 As the data is publicly available and fully anonymised, there are no confidentiality or privacy concerns. This makes the dataset well suited to exploratory analysis and regression‑based modelling. 
 
 ## Data Source
-The dataset used in this project is publicly available and was sourced from Kaggle: 
+The dataset used in this project is publicly available and was sourced from Kaggle:
+
 [Reading Habits and Mood Impacts](https://www.kaggle.com/datasets/hanaksoy/reading-habits-and-mood-impact-dataset)
 
 ## Analysis Notebook
 The full analysis for this project was carried out in a single notebook, including data preparation, exploratory analysis, regression modelling, and diagnostic checks. 
 
 The notebook is included in this repository: 
-[Project Notebook](https://github.com/BlossomInsights/Reading_Mood_Analysis/blob/main/reading_mood_project.ipynb)
+[Analysis Notebook](https://github.com/BlossomInsights/Reading_Mood_Analysis/blob/main/reading_mood_project.ipynb)
 
 ## Tools Used
 This project was implemented using Python within a Kaggle Notebook, a cloud‑based, Jupyter‑compatible environment that supports reproducible data analysis and visualisation. Core libraries included **pandas** for data manipulation and preparation, **matplotlib** for data visualisation, and **statsmodels** for regression modelling and diagnostic analysis. 
@@ -56,30 +57,41 @@ Initial analysis focused on the distribution of mood impact across the dataset. 
 Reading behaviour was then examined across mood categories. Average weekly reading time increased steadily from individuals reporting negative mood outcomes to those reporting neutral outcomes, and was highest among individuals reporting positive mood outcomes. This pattern suggests a clear association between higher reading engagement and more positive mood. 
 
 ![Figure2](Images/Figure2.png)
+
 **Figure 2: Average Weekly Reading Time By Mood Category**
 
 To further explore this relationship, weekly reading time was grouped into low, medium, and high reading categories. Comparing mood outcomes across these groups showed that individuals in higher reading categories were more likely to report positive mood outcomes, while lower reading categories showed a higher proportion of neutral or negative responses. These findings provided a strong foundation for the regression analysis that followed. 
 
 ![Figure3](Images/Figure3.png)
+
 **Figure 3: Mood Impact By Reading Level**
 
 ## Regression Analysis
-To formally assess whether the patterns observed in the exploratory analysis persisted after accounting for demographic factors, a multiple linear regression model was fitted. The dependent variable was encoded mood impact, with weekly reading time, age, and gender included as explanatory variables. An intercept term was included in the model. Ordinary Least Squares (OLS) regression was selected due to its transparency and suitability for exploratory behavioural analysis. This approach allows the relative contribution of reading behaviour and demographic factors to mood outcomes to be examined in a straightforward and interpretable way.
+To formally assess whether the patterns observed in the exploratory analysis persisted after accounting for demographic factors, a multiple linear regression model was fitted. The dependent variable was encoded mood impact, with weekly reading time, age, and gender included as explanatory variables. An intercept term was included in the model. 
+
+Ordinary Least Squares (OLS) regression was selected due to its transparency and suitability for exploratory behavioural analysis. This approach allows the relative contribution of reading behaviour and demographic factors to mood outcomes to be examined in a straightforward and interpretable way. 
+
 ...
 ```python
-y = df["Mood_Impact_Num"]X = df[["Weekly_Reading_Time(hours)", "Age", "Gender_Num"]]X = sm.add_constant(X)model = sm.OLS(y, X).fit()
+y = df["Mood_Impact_Num"]
+X = df[["Weekly_Reading_Time(hours)", "Age", "Gender_Num"]]
+X = sm.add_constant(X)
+
+model = sm.OLS(y, X).fit()
 ```
 
-The fitted model demonstrated strong overall performance, explaining a large proportion of thevariation in mood impact (R² ≈ 0.72). Weekly reading time emerged as the strongest and only statistically significant predictor of mood impact. Age and gender did not show statistically significant relationships once reading behaviour was accounted for.
+The fitted model demonstrated strong overall performance, explaining a large proportion of the variation in mood impact. The R‑squared value was approximately 0.72, with an adjusted R‑squared of approximately 0.71, indicating that model fit remained high after accounting for multiple predictors. The model was statistically significant overall. 
 
+ ![Figure4](Images/Figure4.png)
+ 
 **Figure 4: OLS regression results summary**
 
 The relationship between weekly reading time and mood score is visualised below, with thefitted regression line overlaid.
-
+![Figure3](Images/Figure3.png)
 **Figure 5: Relationship between weekly reading time and mood score with fitted regressionline**
 
 Residual diagnostics did not indicate major violations of OLS assumptions.
-
+![Figure3](Images/Figure3.png)
 **Figure 6: Residuals plotted against predicted mood scores**
 
 ## Key Findings
