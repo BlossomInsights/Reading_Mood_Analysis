@@ -82,6 +82,8 @@ model = sm.OLS(y, X).fit()
 
 The fitted model demonstrated strong overall performance, explaining a large proportion of the variation in mood impact. The R‑squared value was approximately 0.72, with an adjusted R‑squared of approximately 0.71, indicating that model fit remained high after accounting for multiple predictors. The model was statistically significant overall. 
 
+The OLS summary table provides the key statistics used to evaluate each predictor. Weekly reading time is the only variable with a statistically significant coefficient (p < 0.05), while age and gender show non‑significant effects. This suggests that reading behaviour adds meaningful explanatory value to the model, whereas demographic factors contribute very little once reading time is considered.
+
  ![Figure4](Images/Figure4.png)
  
 **Figure 4: OLS regression results summary**
@@ -92,11 +94,13 @@ Weekly reading time emerged as the strongest and only statistically significant 
 
 **Figure 5: Relationship between weekly reading time and mood score with fitted regression line**
 
-Overall, the regression results suggest that behavioural factors, such as reading engagement, play a more important role in explaining mood outcomes within this dataset than basic demographic characteristics. Results are interpreted as associations rather than causal effects, reflecting the self‑reported and cross‑sectional nature of the data. 
+The residuals plotted against the predicted mood scores form a fairly even scatter around zero, with no clear pattern or funnel shape. This suggests that the model is behaving as expected, with a stable relationship and no signs that the errors are uneven or systematically biased. The residual plot supports the suitability of the OLS model for this exploratory analysis.
 
 ![Figure6](Images/Figure6.png)
 
 **Figure 6: Residuals plotted against predicted mood scores**
+
+Overall, the regression results suggest that behavioural factors, such as reading engagement, play a more important role in explaining mood outcomes within this dataset than basic demographic characteristics. Results are interpreted as associations rather than causal effects, reflecting the self‑reported and cross‑sectional nature of the data. 
 
 ## Key Findings
 Higher weekly reading time is consistently associated with more positive self‑reported mood outcomes across both exploratory and regression analyses. Reading behaviour emerges as a stronger explanatory factor than demographic variables such as age and gender within this dataset. Findings are interpreted as associations rather than causal effects due to the self‑reported and cross‑sectional nature of the data. 
