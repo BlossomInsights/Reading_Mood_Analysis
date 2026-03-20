@@ -19,7 +19,7 @@ The dataset used in this project is publicly available and was sourced from Kagg
 The full analysis for this project was carried out in a single notebook, including data preparation, exploratory analysis, regression modelling, and diagnostic checks. 
 
 The notebook is included in this repository: 
-[Project Notebook](https://github.com/BlossomInsights/DSPP_Reading_Mood_Analysis/blob/main/reading_mood_project.ipynb)
+[Project Notebook](https://github.com/BlossomInsights/Reading_Mood_Analysis/blob/main/reading_mood_project.ipynb)
 
 ## Tools Used
 This project was implemented using Python within a Kaggle Notebook, a cloud‑based, Jupyter‑compatible environment that supports reproducible data analysis and visualisation. Core libraries included **pandas** for data manipulation and preparation, **matplotlib** for data visualisation, and **statsmodels** for regression modelling and diagnostic analysis. 
